@@ -1,0 +1,42 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+    <script>
+        function welcome(){
+            return 'Hello world'
+        }
+        alert(welcome());
+    </script>
+</body>
+</html> -->
+
+<!-- 위의 코드는 아무런 문제가 없다.
+하지만 welcome 함수가 자주 사용되는 것이라고 가정해보자
+이런 경우 이것이 필요할 때마다 이 함수를 정의해서
+사용하는 것은 유지보수도 어렵고 낭비가 될 것이다.
+이럴 때 모듈이 필요하다.
+함수 welcome을 모듈로 만들어보자. -->
+
+
+<!-- 수정한코드 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <script src="module.js"></script>
+</head>
+<body>
+    <script>
+        alert(welcome());
+    </script>
+</body>
+</html>
+
+<!-- 위의 코드는 컨텐츠 대신에 src 속성이 있다.
+브라우저는 src 속성에 있는 파일을 다운로드해서 실행시킨다.
+greeting.js에는 함수 welcome가 정의되어 있기 때문에 main.html 안에
+이 함수가 정의 되어 있지 않음에도 실행할 수 있는 것이다. -->
